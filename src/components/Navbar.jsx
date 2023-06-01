@@ -10,33 +10,27 @@ import { BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
 import { MdFavorite, MdHelp } from "react-icons/md";
-import { motion } from "framer-motion";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 200 }}
-      className="flex justify-between items-center max-w-[1640px] mx-auto p-4"
-    >
+    <div className="flex justify-between items-center max-w-[1640px] mx-auto p-4">
       {/* left side */}
-      <div onClick={() => setNav(!nav)} className="flex gap-5 items-center">
-        <AiOutlineMenu className="text-3xl" />
-        <h1 className="text-2xl sm:text-3xl lg:4xl">
+      <div className="flex gap-1 sm:gap-5 items-center">
+        <AiOutlineMenu onClick={() => setNav(!nav)} className="text-xl sm:text-3xl cursor-pointer" />
+        <h1 className="text-2xl sm:text-3xl lg:4xl cursor-pointer">
           Best<span className="font-bold pl-1">Eats</span>
         </h1>
-        <div className="flex gap-2 p-1 rounded-full bg-gray-400">
-          <p className="bg-black p-2 rounded-full text-white">Delivery</p>
-          <p className="p-2">Pickup </p>
+        <div className="flex gap-1 sm:p-1 rounded-full bg-gray-400">
+          <p className="bg-black p-2 rounded-full text-white cursor-pointer">Delivery</p>
+          <p className="p-2 cursor-pointer">Pickup </p>
         </div>
       </div>
 
       {/* Search Input */}
       <div className=" border rounded-full p-2 flex gap-2 items-center w-[200px] sm:w-[400px] lg:w-[500px]">
-        <AiOutlineSearch className="text-2xl" />
+        <AiOutlineSearch className="text-2xl cursor-pointer" />
         <input
           type="text"
           placeholder="Search here..."
@@ -45,7 +39,7 @@ function Navbar() {
       </div>
 
       {/* Cart */}
-      <div className=" p-1 px-3 rounded-2xl bg-black text-white flex items-center gap-1">
+      <div className="hidden sm:flex p-1 px-3 rounded-2xl bg-black text-white items-center gap-1 cursor-pointer">
         <div>
           <AiOutlineShoppingCart />
         </div>
@@ -100,7 +94,7 @@ function Navbar() {
           </ul>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
