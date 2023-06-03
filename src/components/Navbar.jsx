@@ -66,31 +66,31 @@ function Navbar() {
       >
         <AiOutlineClose
           onClick={() => setNav(!nav)}
-          className="text-4xl absolute top-4 right-4 cursor-pointer"
+          className="text-4xl absolute top-4 right-4 cursor-pointer  hover:text-orange-500 hover:scale-105 duration-300"
         />
-        <h2 className="p-4 text-2xl">
+        <h2 className="p-4 text-2xl cursor-pointer">
           Best<span className="pl-1 font-bold">Eats</span>
         </h2>
         <ul className="p-4 text-gray-800">
-          <li className="text-xl py-4 flex">
+          <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
             <TbTruckDelivery className="text-2xl mr-4" /> Orders
           </li>
-          <li className="text-xl py-4 flex">
+          <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
             <MdFavorite className="text-2xl mr-4" /> Favorites
           </li>
-          <li className="text-xl py-4 flex">
+          <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
             <FaWallet className="text-2xl mr-4" /> Wallet
           </li>
-          <li className="text-xl py-4 flex">
+          <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
             <MdHelp className="text-2xl mr-4" /> Help
           </li>
-          <li className="text-xl py-4 flex">
+          <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
             <AiFillTag className="text-2xl mr-4" /> Promotions
           </li>
-          <li className="text-xl py-4 flex">
+          <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
             <BsFillSaveFill className="text-2xl mr-4" /> Best Ones
           </li>
-          <li className="text-xl py-4 flex">
+          <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
             <FaUserFriends className="text-2xl mr-4" /> Invite Friends
           </li>
         </ul>

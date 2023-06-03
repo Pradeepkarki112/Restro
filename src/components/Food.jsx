@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "./Data";
 
 const Food = () => {
+
+  const[foods, setFoods] = useState(data);
+
+  // Filter Category
+  const filterType = (category)=>{
+    setFoods(
+      data.filter((item) =>{
+        return (item.category === category);
+      })
+    );
+  };
+
+  // Filter Price
+  const filterPrice = (price)=>{
+    setFoods(
+      data.filter((item) =>{
+        return (item.price === price);
+      })
+    );
+  };
+
   return (
     <div className="max-w-[1640px] mx-auto px-4">
       <div className="my-2 font-bold text-3xl text-orange-500 flex flex-col items-center">
@@ -12,19 +33,19 @@ const Food = () => {
         <div>
           <div className="mb-2 font-bold">Filter Type</div>
           <div className="text-orange-500 flex justify-center sm:justify-between flex-wrap gap-5">
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => setFoods(data)}>
               All
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterType('burger')}>
               Burgers
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterType('pizza')}>
               Pizza
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterType('salad')}>
               Salad
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterType('chicken')}>
               Chicken
             </p>
           </div>
@@ -33,19 +54,19 @@ const Food = () => {
         <div>
           <div className="mb-2 font-bold">Filter Price</div>
           <div className="text-orange-500 flex justify-center sm:justify-between flex-wrap gap-5">
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$')}>
               $
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$$')}>
               $$
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$$$')}>
               $$$
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$$$$')}>
               $$$$
             </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg">
+            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$$$$$')}>
               $$$$$
             </p>
           </div>
@@ -53,7 +74,7 @@ const Food = () => {
       </div>
 
       <div className="py-4 gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {data.map((item) => (
+        {foods.map((item) => (
           <div className="border shadow-lg rounded-t-lg hover:scale-105 duration-300 cursor-pointer">
             <img
               src={item.image}
