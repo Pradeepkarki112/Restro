@@ -141,7 +141,7 @@ export const categories = [
   },
   {
     id: 6,
-    name: "Restaurant Rewards",
+    name: "Rewards",
     image: require('../assets/Restaurant Rewards.png'),
   },
   {

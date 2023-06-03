@@ -25,14 +25,14 @@ const Food = () => {
 
   return (
     <div className="max-w-[1640px] mx-auto px-4">
-      <div className="my-2 font-bold text-3xl text-orange-500 flex flex-col items-center">
+      <div className="my-2 font-bold text-2xl sm:text-3xl text-orange-500 flex flex-col items-center">
         Top Rated Menu Items
       </div>
 
       <div className="md:flex md:justify-between md:gap-3 lg:gap-5">
         <div>
           <div className="mb-2 font-bold">Filter Type</div>
-          <div className="text-orange-500 flex justify-center sm:justify-between flex-wrap gap-5">
+          <div className="text-orange-500 flex justify-center sm:justify-between flex-wrap gap-4">
             <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => setFoods(data)}>
               All
             </p>
@@ -53,7 +53,7 @@ const Food = () => {
 
         <div>
           <div className="mb-2 font-bold">Filter Price</div>
-          <div className="text-orange-500 flex justify-center sm:justify-between flex-wrap gap-5">
+          <div className="text-orange-500 flex justify-center sm:justify-between flex-wrap gap-4">
             <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$')}>
               $
             </p>
@@ -65,9 +65,6 @@ const Food = () => {
             </p>
             <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$$$$')}>
               $$$$
-            </p>
-            <p className="border-2 border-orange-500 cursor-pointer hover:bg-orange-500 hover:text-white px-4 py-1 rounded-lg" onClick={() => filterPrice('$$$$$')}>
-              $$$$$
             </p>
           </div>
         </div>
