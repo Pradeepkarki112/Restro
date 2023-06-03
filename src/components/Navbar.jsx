@@ -13,6 +13,12 @@ import { MdFavorite, MdHelp } from "react-icons/md";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
+  const [input, setInput] =useState('');
+
+  const inputChange = (event) =>{
+    setInput(event.target.value);
+    console.log(input);
+  }
 
   return (
     <div className="flex justify-between items-center max-w-[1640px] mx-auto p-4">
@@ -40,6 +46,8 @@ function Navbar() {
           type="text"
           placeholder="Search here..."
           className="focus:outline-none w-full"
+          value={input}
+          onChange={inputChange}
         />
       </div>
 

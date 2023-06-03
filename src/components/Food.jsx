@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { data } from "./Data";
+import {MdFavorite} from 'react-icons/md'
 
 const Food = () => {
 
@@ -72,12 +73,13 @@ const Food = () => {
 
       <div className="py-4 gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {foods.map((item) => (
-          <div className="border shadow-lg rounded-t-lg hover:scale-105 duration-300 cursor-pointer">
+          <div className="relative border shadow-lg rounded-t-lg hover:scale-105 duration-300 cursor-pointer">
             <img
               src={item.image}
               alt={item.name}
               className="w-full h-[200px] object-cover rounded-t-lg"
             />
+            <MdFavorite className="absolute text-4xl text-gray-500 hover:text-orange-500 right-4 top-4" />
             <div className="flex justify-between px-3 py-4">
               <p className="font-bold">{item.name}</p>
               <p className="bg-orange-500 rounded-2xl p-1 text-white">
