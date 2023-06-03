@@ -22,10 +22,10 @@ function Navbar() {
           onClick={() => setNav(!nav)}
           className="text-xl sm:text-3xl cursor-pointer"
         />
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl cursor-pointer">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl cursor-pointer pr-2 sm:p-0">
           Best<span className="font-bold pl-1">Eats</span>
         </h1>
-        <div className="flex gap-1 sm:p-1 rounded-full bg-gray-400">
+        <div className="hidden sm:flex gap-1 sm:p-1 rounded-full bg-gray-400">
           <p className="bg-black p-2 rounded-full text-white cursor-pointer">
             Delivery
           </p>
