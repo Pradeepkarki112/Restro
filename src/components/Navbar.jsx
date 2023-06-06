@@ -29,7 +29,7 @@ function Navbar() {
           className="text-xl sm:text-3xl cursor-pointer"
         />
         <h1 className="text-2xl sm:text-3xl lg:text-4xl cursor-pointer pr-2 sm:p-0">
-          Best<span className="font-bold pl-1">Eats</span>
+          JB<span className="font-bold pl-1">Restro</span>
         </h1>
         <div className="hidden sm:flex gap-1 sm:p-1 rounded-full bg-gray-400">
           <p className="bg-black p-2 rounded-full text-white cursor-pointer">
@@ -77,7 +77,7 @@ function Navbar() {
           className="text-4xl absolute top-4 right-4 cursor-pointer  hover:text-orange-500 hover:scale-105 duration-300"
         />
         <h2 className="p-4 text-2xl cursor-pointer">
-          Best<span className="pl-1 font-bold">Eats</span>
+          JB<span className="pl-1 font-bold">Restro</span>
         </h2>
         <ul className="p-4 text-gray-800">
           <li className="text-xl py-4 flex hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer">
